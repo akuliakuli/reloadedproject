@@ -17,7 +17,7 @@ enum Role {
 }
 
 model User {
-  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  id              String @id @default(cuid())
   username        String  @unique
   firstname       String
   lastname        String
@@ -47,7 +47,7 @@ model User {
 
 
 model FillRequest {
-  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  id              String @id @default(cuid())
 
 
   userId          String
@@ -61,7 +61,7 @@ model FillRequest {
 }
 
 model WithdrawRequests {
-  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  id              String @id @default(cuid())
 
   userId          String
   user            User? @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -81,9 +81,9 @@ enum FillStatus {
 
 
 model Blog {
-  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  id              String @id @default(cuid())
   image           String
-  theme           String[]
+  theme           String
   title           String
   content         String
 
