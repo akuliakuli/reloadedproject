@@ -29,7 +29,7 @@ function University() {
         </div>
         <div className='border items-center justify-center border-gray-600 rounded-xl p-3 h-fit w-[100%] md:w-[30%] flex flex-col'>
           <FaSearchDollar size={30}/>
-          <p className=' text-xl mt-[2%]'>Strategic Investments</p>
+          <p className=' text-xl mt-[2%]'>Mastering Strategic Investments</p>
         </div>
         <div className='border items-center justify-center border-gray-600 rounded-xl p-3 h-fit w-[100%] md:w-[30%] flex flex-col'>
           <FaMoneyBillTrendUp size={30} />
@@ -74,7 +74,7 @@ function University() {
               <a href="#">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Shape Your Financial Destiny</h5>
               </a>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Our institution is your gateway to a brighter future, offering a holistic approach to financial education. Dive into the world of financial planning, risk management, and investment analysis with our expert guidance</p>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
            
           </div>
       </div>
