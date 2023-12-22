@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import bcrypt from 'bcrypt'
 
 import prisma from '@/app/[locale]/libs/prismadb'
 import getCurrentUser from "@/app/[locale]/actions/getCurrentUser";
@@ -20,7 +19,6 @@ export async function POST(
     title,
     image,
     content,
-    theme
    } = body;
 
   Object.keys(body).forEach((value: any) => {
@@ -29,18 +27,8 @@ export async function POST(
     }
   });
 
-  let safeTheme = [];
   
-  if(theme.cryptoecosystem == true){
-    safeTheme.push('Crypto Ecosystem')
-  }
-  if(theme.investment == true){
-    safeTheme.push('Investment')
-  }
-  if(theme.bitcoin == true){
-    safeTheme.push('Bitcoin')
-  }
-  
+ 
   
   const User = await prisma.blog.update({
     where: {
@@ -50,7 +38,6 @@ export async function POST(
       image: image,
       title: title,
       content: content,
-      theme: safeTheme
     },
   })
   

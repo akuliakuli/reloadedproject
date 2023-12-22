@@ -29,9 +29,7 @@ const EditBlogModal = () => {
           title: '',
           image: '',
           content: '',
-          cryptoecosystem: false,
-          investment: false,
-          bitcoin: false
+
         },
   });
   
@@ -83,20 +81,7 @@ const EditBlogModal = () => {
         <label>Content</label>
         <textarea placeholder="Content" {...register("content", {required: true})} />
 
-        <div className="flex justify-between">
-        <div className="flex w-[33%] flex-col justify-center items-center">
-            <label>Crypto Ecosystem</label>
-            <input type="checkbox" placeholder="checkbox" {...register("cryptoecosystem", {required: false})} />
-        </div>
-        <div className="flex w-[33%] flex-col justify-center items-center">
-            <label>Investment</label>
-            <input type="checkbox" placeholder="checkbox" {...register("investment", {required: false})} />
-        </div>
-        <div className="flex w-[33%] flex-col justify-center items-center">
-            <label>Bitcoin</label>
-            <input type="checkbox" placeholder="checkbox" {...register("bitcoin", {required: false})} />
-        </div>
-        </div>
+     
 
       <input type="submit" placeholder="Submit" disabled={isLoading}/>
     </form>
